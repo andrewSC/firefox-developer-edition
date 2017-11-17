@@ -2,7 +2,7 @@
 # Contributor: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 
 pkgname=firefox-developer-edition
-pkgver=57.0b13
+pkgver=58.0b1
 pkgrel=1
 pkgdesc="Developer Edition of the popular Firefox web browser"
 arch=(i686 x86_64)
@@ -26,7 +26,7 @@ source=("hg+$_repo#tag=FIREFOX_${pkgver//./_}_RELEASE"
         firefox-install-dir.patch
         no-plt.diff)
 sha512sums=('SKIP'
-            '36042b0034e9958b15b7f5eab70d92a4332448be40c81d308200149044022cf298d958ed9836a421ce13cde81229df777a32c074c46014cc99e165f4084088e2'
+            '12617f60e01420350b8d9c7c1c3a2a5ba0f2c46df31b0e23e51093ebd68019ced7d193a01d964421b91e1b444ce4ab499523f21cd3a39a2ffac8883d096ac195'
             '84e741b6a4c7675c846c16a0e0280d00e7be5477b07b693ccddac597987e8979a35d07a9ac8a3a28338b458ebdf41754ceb2119b8e41d2ec41f95b551232c64c'
             '16c2f798d371a2386c060a4652a6c82dad6aeca234d910c738cfe01b780faae8e00a37b7e38f4895f074c3b9b60c582fe77dc306771d00ab7473559b748298de'
             '4d741f9446f0529505719ccdaa69181ed7836c7469e1a5d81fa08a4555ef6a6c2acf8db7cadfb3fe365766b407720e7927b1ded337aa0700578772bf1fc5fad6'
