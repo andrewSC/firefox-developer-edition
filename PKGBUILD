@@ -2,7 +2,7 @@
 # Contributor: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 
 pkgname=firefox-developer-edition
-pkgver=58.0b1
+pkgver=58.0b7
 pkgrel=1
 pkgdesc="Developer Edition of the popular Firefox web browser"
 arch=(i686 x86_64)
@@ -21,15 +21,11 @@ _repo=https://hg.mozilla.org/mozilla-unified
 source=("hg+$_repo#tag=FIREFOX_${pkgver//./_}_RELEASE"
         $pkgname.desktop
         firefox-symbolic.svg
-        wifi-disentangle.patch
-        wifi-fix-interface.patch
         firefox-install-dir.patch
         no-plt.diff)
 sha512sums=('SKIP'
             '12617f60e01420350b8d9c7c1c3a2a5ba0f2c46df31b0e23e51093ebd68019ced7d193a01d964421b91e1b444ce4ab499523f21cd3a39a2ffac8883d096ac195'
             '84e741b6a4c7675c846c16a0e0280d00e7be5477b07b693ccddac597987e8979a35d07a9ac8a3a28338b458ebdf41754ceb2119b8e41d2ec41f95b551232c64c'
-            '16c2f798d371a2386c060a4652a6c82dad6aeca234d910c738cfe01b780faae8e00a37b7e38f4895f074c3b9b60c582fe77dc306771d00ab7473559b748298de'
-            '4d741f9446f0529505719ccdaa69181ed7836c7469e1a5d81fa08a4555ef6a6c2acf8db7cadfb3fe365766b407720e7927b1ded337aa0700578772bf1fc5fad6'
             'ce764de6deae65ae5c888b12d163419c7828cf8b31f73d7c3bc8dc3dafbca0005ea377b5b1fcea0d1f5c613459fa393690d5bc9d8e5c3e46db940b151082fbd6'
             '4c2ef8ebedc1184c3967c123cafd63ba1abf2a274993aea8475c434f91a40b86e7c5d3c78c3b2809cd15310af4c613d5841a9114315f861338c36f498a782fd0')
 
@@ -51,10 +47,6 @@ prepare() {
 
   cd mozilla-unified
   patch -Np1 -i ../firefox-install-dir.patch
-
-  # https://bugzilla.mozilla.org/show_bug.cgi?id=1314968
-  patch -Np1 -i ../wifi-disentangle.patch
-  patch -Np1 -i ../wifi-fix-interface.patch
 
   # https://bugzilla.mozilla.org/show_bug.cgi?id=1382942
   patch -Np1 -i ../no-plt.diff
