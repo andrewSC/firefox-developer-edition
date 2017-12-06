@@ -2,7 +2,7 @@
 # Contributor: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 
 pkgname=firefox-developer-edition
-pkgver=58.0b7
+pkgver=58.0b9
 pkgrel=1
 pkgdesc="Developer Edition of the popular Firefox web browser"
 arch=('x86_64')
@@ -19,10 +19,10 @@ optdepends=('networkmanager: Location detection via available WiFi networks'
 options=(!emptydirs !makeflags !strip)
 _repo=https://hg.mozilla.org/mozilla-unified
 source=("hg+$_repo#tag=FIREFOX_${pkgver//./_}_RELEASE"
-        '$pkgname.desktop'
-        'firefox-symbolic.svg'
-        'firefox-install-dir.patch'
-        'no-plt.diff')
+        "$pkgname".desktop
+        firefox-symbolic.svg
+        firefox-install-dir.patch
+        no-plt.diff)
 sha512sums=('SKIP'
             '12617f60e01420350b8d9c7c1c3a2a5ba0f2c46df31b0e23e51093ebd68019ced7d193a01d964421b91e1b444ce4ab499523f21cd3a39a2ffac8883d096ac195'
             '84e741b6a4c7675c846c16a0e0280d00e7be5477b07b693ccddac597987e8979a35d07a9ac8a3a28338b458ebdf41754ceb2119b8e41d2ec41f95b551232c64c'

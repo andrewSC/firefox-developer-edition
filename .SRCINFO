@@ -1,9 +1,8 @@
 pkgbase = firefox-developer-edition
 	pkgdesc = Developer Edition of the popular Firefox web browser
-	pkgver = 58.0b7
+	pkgver = 58.0b9
 	pkgrel = 1
 	url = https://www.mozilla.org/firefox/channel/#developer
-	arch = i686
 	arch = x86_64
 	license = MPL
 	license = GPL
@@ -44,7 +43,7 @@ pkgbase = firefox-developer-edition
 	options = !emptydirs
 	options = !makeflags
 	options = !strip
-	source = hg+https://hg.mozilla.org/mozilla-unified#tag=FIREFOX_58_0b7_RELEASE
+	source = hg+https://hg.mozilla.org/mozilla-unified#tag=FIREFOX_58_0b9_RELEASE
 	source = firefox-developer-edition.desktop
 	source = firefox-symbolic.svg
 	source = firefox-install-dir.patch
